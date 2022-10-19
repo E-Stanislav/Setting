@@ -25,5 +25,10 @@ psql
 ```
 ### Change the postgres user password on Debian Linux
 ```
-alter user postgres with password 'aasasa@14232';
+alter user postgres with password 'admin@123';
+```
+### Create new user with pass and add privilegies
+```
+CREATE USER master WITH LOGIN PASSWORD 'admin@123' SUPERUSER CREATEDB CREATEROLE INHERIT;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO master;	
 ```

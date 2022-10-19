@@ -37,6 +37,7 @@ CREATE USER master WITH LOGIN PASSWORD 'admin@123' SUPERUSER CREATEDB CREATEROLE
 listen_addresses = '*'	
 ```
 ##### File: pg_hba.conf
+##### Add line
 ```
 host    all         all         {your_ip_address}/24        md5
 ```

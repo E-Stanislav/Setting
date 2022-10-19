@@ -29,6 +29,14 @@ alter user postgres with password 'admin@123';
 ```
 ### Create new user with pass and add privilegies
 ```
-CREATE USER master WITH LOGIN PASSWORD 'admin@123' SUPERUSER CREATEDB CREATEROLE INHERIT;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO master;	
+CREATE USER master WITH LOGIN PASSWORD 'admin@123' SUPERUSER CREATEDB CREATEROLE INHERIT;	
+```
+### Open TCP/IP for connect
+##### File: postgresql.conf
+```
+listen_addresses = '*'	
+```
+##### File: pg_hba.conf
+```
+host    all         all         {your_ip_address}/24        md5
 ```

@@ -25,3 +25,15 @@ pm2 start main.py --interpreter=python3 --max-memory-restart 300M
 ```
 pm2 list
 ```
+Сохранение процесса PM2
+```
+pm2 save
+```
+Настройка автозапуска PM2
+```
+pm2 startup
+```
+Вывод инструкции по установке автозапуска
+```
+sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u root --hp /home/root
+```
